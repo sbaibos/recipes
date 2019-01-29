@@ -6,4 +6,10 @@ import { Injectable } from '@angular/core';
 export class RecipesService {
 
   constructor() { }
+  
+  clicked(){
+	  
+	  console.log('clicked');
+	  
+  }
 }
