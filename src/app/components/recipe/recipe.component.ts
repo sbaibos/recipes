@@ -14,4 +14,9 @@ export class RecipeComponent implements OnInit {
   ngOnInit() {
   }
 
+  clicked(){
+	  
+	  console.log('clicked');
+	  
+  }
 }
