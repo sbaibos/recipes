@@ -5,3 +5,9 @@
 </div>
 
 <button (click) ="clicked()">click me</button>
+
+<ul *ngIf = "users">
+<li *ngFor = "let user of users"> 
+    <p> {{user.recipe_name}}</p>
+</li>
+</ul>
