@@ -10,9 +10,15 @@ import {RecipesService} from '../../services/recipes.service';
 export class RecipeComponent implements OnInit {
   recipeModel: RecipeModel[];
   name = "recipe 1";
+  users: Object;
   constructor(private recipes:RecipesService) { }
 
   ngOnInit() {
+	  this.recipes.getRecipes().subscribe(data=>{
+	   this.users = data;
+	  console.log(this.recipes);
+	  }
+	  );
   }
 
   clicked(){
