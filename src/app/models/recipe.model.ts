@@ -1,4 +1,4 @@
 export class RecipeModel {
-    id: number;
-    name: string;
+    recipe_id: number;
+    recipe_name: string;
 }
