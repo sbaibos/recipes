@@ -17,13 +17,7 @@ export class RecipeComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {
-	  
-	  
-	 
-	  
-	  
-  }
+  ngOnInit() { }
 
   clicked(){
 	  
@@ -31,11 +25,11 @@ export class RecipeComponent implements OnInit {
 	  
 }
 
-selectedUser: RecipeModel;
+selectedRecipe: RecipeModel;
 
-selectedUsers(user: RecipeModel): void { 
-	
-		   this.selectedUser = new RecipeModel;
+selectedRecipes(recipe: RecipeModel): void { 
+  this.selectedRecipe = recipe;
+  
 	  
 	  
 	

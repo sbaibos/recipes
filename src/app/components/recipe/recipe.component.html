@@ -17,12 +17,12 @@
 
 <ul >
   <li *ngFor="let recipe of recipes">
-    <p (click) ="selectedUsers(user)">{{recipe.recipe_id}}{{recipe.recipe_name}} </p>
+    <p (click) ="selectedRecipes(recipe)">{{recipe.recipe_id}}{{recipe.recipe_name}} </p>
   </li>
 </ul>
 
-<ul *ngIf = "selectedUser">
-<li *ngFor = "let user of users"> 
-    <p> {{selectedUser.recipe_id}}</p>
+<ul *ngIf = "selectedRecipe">
+<li > 
+    <input [(ngModel)] = "selectedRecipe.recipe_name">
 </li>
 </ul>
