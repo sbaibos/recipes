@@ -4,7 +4,7 @@
 
 </div>
 
-<!-- <button (click) ="clicked()">click me</button> -->
+<button (click) ="clicked()">click me</button>
 
 <!-- <ul *ngIf = "users">
 <li *ngFor = "let user of users"> 
@@ -17,7 +17,7 @@
 
 <ul >
   <li *ngFor="let recipe of recipes">
-    <span >{{recipe.recipe_id}}</span> {{recipe.recipe_name}}
+    <p (click) ="selectedUsers(user)">{{recipe.recipe_id}}{{recipe.recipe_name}} </p>
   </li>
 </ul>
 

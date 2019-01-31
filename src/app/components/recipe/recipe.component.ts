@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {RecipeModel} from '../../models/recipe.model';
-// import {RecipesService} from '../../services/recipes.service';
 import {RECIPES} from '../../mockfiles/mock-recipes';
 
 @Component({
@@ -15,26 +14,22 @@ export class RecipeComponent implements OnInit {
   recipes = RECIPES; //the mockfile
   
      
-  // private recipes:RecipesService
+  
   constructor() { }
 
   ngOnInit() {
-	  // this.recipes.getRecipes().subscribe(data=>{
-	   // this.users = data;
-	  // console.log(this.users);
-	  // }
-	  // );
+	  
 	  
 	 
 	  
 	  
   }
 
-  // clicked(){
+  clicked(){
 	  
-	  // this.recipes.clicked();
+	  console.log('clicked');
 	  
-// }
+}
 
 selectedUser: RecipeModel;
 
