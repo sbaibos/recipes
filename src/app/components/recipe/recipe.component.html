@@ -25,4 +25,16 @@
 <li > 
     <input [(ngModel)] = "selectedRecipe.recipe_name">
 </li>
+
+
+<li > 
+    <p>{{selectedRecipe.recipe_name}}</p>
+</li>
+
+</ul>
+
+<ul >
+  <li *ngFor="let ingredient of ingredients">
+    <p >{{ingredient.product}}{{ingredient.price}} </p>
+  </li>
 </ul>

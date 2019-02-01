@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {RecipeModel} from '../../models/recipe.model';
+import {IngredientModel} from '../../models/ingredient.model';
 import {RECIPES} from '../../mockfiles/mock-recipes';
+import {INGREDIENTS} from '../../mockfiles/mock-ingredients';
 
 @Component({
   selector: 'app-recipe',
@@ -8,10 +10,12 @@ import {RECIPES} from '../../mockfiles/mock-recipes';
   styleUrls: ['./recipe.component.css']
 })
 export class RecipeComponent implements OnInit {
-  recipeModel: RecipeModel[];
+  recipeModel: RecipeModel[];//initialize recipe model
+  ingredientModel: IngredientModel[];//initialize ingredient model
   name = "recipe 1";
   users: Object;
-  recipes = RECIPES; //the mockfile
+  recipes = RECIPES; //recipes  mockfile
+  ingredients = INGREDIENTS;//ingredients  mockfile
   
      
   

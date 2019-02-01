@@ -1,82 +1,82 @@
 import { IngredientModel } from '../models/ingredient.model';
 
-export const iNGREDIENTS: IngredientModel[] = [
+export const INGREDIENTS: IngredientModel[] = [
   {
     product_id:1,
-    product: "Κανέλλα τριμμένη Ήλιος (35 g)",
+    product: "ΞΞ±Ξ½Ξ­Ξ»Ξ»Ξ± Ο„ΟΞΉΞΌΞΌΞ­Ξ½Ξ· Ξ‰Ξ»ΞΉΞΏΟ‚ (35 g)",
     price:16,
-    ingredient:"καννελα",
+    ingredient:"ΞΊΞ±Ξ½Ξ½ΞµΞ»Ξ±",
     recipe_id:"1"
   },
   {
     product_id: 2,
-    product:"Ζάχαρη Άχνη Pillow Hai Αφοι Χαΐτογλου (400 g)",
+    product:"Ξ–Ξ¬Ο‡Ξ±ΟΞ· Ξ†Ο‡Ξ½Ξ· Pillow Hai Ξ‘Ο†ΞΏΞΉ Ξ§Ξ±ΞΟ„ΞΏΞ³Ξ»ΞΏΟ… (400 g)",
     price:12,
-    ingredient:"ζαχαρη",
+    ingredient:"Ξ¶Ξ±Ο‡Ξ±ΟΞ·",
     recipe_id:"1"
   },
   {
     product_id:3,
-	product:"Συμπυκνωμένο ρόφημα 'Σπιτικές Γεύσεις' Νουνού (400g)",
+	product:"Ξ£Ο…ΞΌΟ€Ο…ΞΊΞ½Ο‰ΞΌΞ­Ξ½ΞΏ ΟΟΟ†Ξ·ΞΌΞ± 'Ξ£Ο€ΞΉΟ„ΞΉΞΊΞ­Ο‚ Ξ“ΞµΟΟƒΞµΞΉΟ‚' ΞΞΏΟ…Ξ½ΞΏΟ (400g)",
 	price:85,
-	ingredient:"γαλα",
-	recipe_id:"1,2"
+	ingredient:"Ξ³Ξ±Ξ»Ξ±",
+	recipe_id:"1, 2"
   },
   {
     product_id:4,
-	product:"Ζάχαρη Λευκή Κρυσταλική (1kg)",
+	product:"Ξ–Ξ¬Ο‡Ξ±ΟΞ· Ξ›ΞµΟ…ΞΊΞ® ΞΟΟ…ΟƒΟ„Ξ±Ξ»ΞΉΞΊΞ® (1kg)",
 	price:73,
-	ingredient:"ζαχαρη",
-	recipe_id:"1,2"
+	ingredient:"Ξ¶Ξ±Ο‡Ξ±ΟΞ·",
+	recipe_id:"1, 2"
   },
   {
     product_id:5,
-	product:"Βανιλέτα Alsa (6x7.5 g)",
+	product:"Ξ’Ξ±Ξ½ΞΉΞ»Ξ­Ο„Ξ± Alsa (6x7.5 g)",
 	price:61,
-	ingredient:"βανιλια",
+	ingredient:"Ξ²Ξ±Ξ½ΞΉΞ»ΞΉΞ±",
 	recipe_id:"1"
   },
   {
     product_id:6,
-	product:"Κορν Φλάουρ Γιώτης (200g) -0,20€",
+	product:"ΞΞΏΟΞ½ Ξ¦Ξ»Ξ¬ΞΏΟ…Ο Ξ“ΞΉΟΟ„Ξ·Ο‚ (200g) -0,20β‚¬",
 	price:74,
-	ingredient:"κορν φλαουρ",
+	ingredient:"ΞΊΞΏΟΞ½ Ο†Ξ»Ξ±ΞΏΟ…Ο",
 	recipe_id:"1"
   },
   {
     product_id:7,
-	product:"Σιμιγδάλι Ψιλό Αλλατίνη (500 g)",
+	product:"Ξ£ΞΉΞΌΞΉΞ³Ξ΄Ξ¬Ξ»ΞΉ Ξ¨ΞΉΞ»Ο Ξ‘Ξ»Ξ»Ξ±Ο„Ξ―Ξ½Ξ· (500 g)",
 	price:98,
-	ingredient:"Σιμιγδάλι",
+	ingredient:"Ξ£ΞΉΞΌΞΉΞ³Ξ΄Ξ¬Ξ»ΞΉ",
 	recipe_id:"1"
   },
   {
    product_id:8,
-	product:"Αυγά Φρέσκα Ελευθέρας Βοσκής Medium 6τεμ. Βλαχάκη (53-63 g) -0.50€",
+	product:"Ξ‘Ο…Ξ³Ξ¬ Ξ¦ΟΞ­ΟƒΞΊΞ± Ξ•Ξ»ΞµΟ…ΞΈΞ­ΟΞ±Ο‚ Ξ’ΞΏΟƒΞΊΞ®Ο‚ Medium 6Ο„ΞµΞΌ. Ξ’Ξ»Ξ±Ο‡Ξ¬ΞΊΞ· (53-63 g) -0.50β‚¬",
 	price:29,
-	ingredient:"Αυγά",
-	recipe_id:"1,2"
+	ingredient:"Ξ‘Ο…Ξ³Ξ¬",
+	recipe_id:"1, 2"
   },
   {
     product_id:9,
-	product:"Αυγά Φρέσκα Medium 6τεμ Χρυσά Αυγά (53-63g)",
+	product:"Ξ‘Ο…Ξ³Ξ¬ Ξ¦ΟΞ­ΟƒΞΊΞ± Medium 6Ο„ΞµΞΌ Ξ§ΟΟ…ΟƒΞ¬ Ξ‘Ο…Ξ³Ξ¬ (53-63g)",
 	price:72,
-	ingredient:"Αυγά",
-	recipe_id:"1,2"
+	ingredient:"Ξ‘Ο…Ξ³Ξ¬",
+	recipe_id:"1, 2"
   },
   {
     product_id:10,
-	product:"Βανίλια 5 τεμ. Ήλιος (1,5 g)",
+	product:"Ξ’Ξ±Ξ½Ξ―Ξ»ΞΉΞ± 5 Ο„ΞµΞΌ. Ξ‰Ξ»ΞΉΞΏΟ‚ (1,5 g)",
 	price:44,
-	ingredient:"Αυγά",
-	recipe_id:"1,2"
+	ingredient:"Ξ‘Ο…Ξ³Ξ¬",
+	recipe_id:"1 ,2"
   },
   {
     product_id:11,
-	product:"Βανίλια 5 τεμ. Ήλιος (1,5 g)",
+	product:"Ξ’Ξ±Ξ½Ξ―Ξ»ΞΉΞ± 5 Ο„ΞµΞΌ. Ξ‰Ξ»ΞΉΞΏΟ‚ (1,5 g)",
 	price:44,
-	ingredient:"Αυγά",
-	recipe_id:"1,2"
+	ingredient:"Ξ‘Ο…Ξ³Ξ¬",
+	recipe_id:"1 ,2"
   }
 
 
