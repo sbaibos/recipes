@@ -14,7 +14,7 @@ export class RecipeComponent implements OnInit {
   
   recipeModel: RecipeModel[];//initialize recipe model
   ingredientModel: IngredientModel[];//initialize ingredient model
-  name = "recipe 1";
+ 
   users: Object;
   recipes = RECIPES; //recipes  mockfile
   ingredients = INGREDIENTS;//ingredients  mockfile

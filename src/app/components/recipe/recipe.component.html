@@ -4,7 +4,7 @@
 
 </div>
 
-<button (click) ="clicked()">click me</button>
+
 
 <!-- <ul *ngIf = "users">
 <li *ngFor = "let user of users"> 
@@ -27,7 +27,7 @@
 
 
 <input [(ngModel)]="selectedRecipeModel" placeholder="search text goes here">
-<ul >
+<ul *ngIf = 'selectedRecipeModel'>
   <li *ngFor="let ingredient of ingredients  | filter : selectedRecipeModel">
     <p >{{ingredient.product}}{{ingredient.price}} </p>
   </li>
