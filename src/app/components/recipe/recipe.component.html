@@ -13,13 +13,17 @@
 </ul> -->
 
 
+<h3>Drop Down</h3>
+    <select [(ngModel)]="selectedRecipeModel" >
+      <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_name">{{recipe.recipe_id}}{{recipe.recipe_name}}</option>
+    </select>
+    <br>
+
+    {{selectedRecipeModel}}
 
 
-<ul >
-  <li *ngFor="let recipe of recipes">
-    <p (click) ="selectedRecipes(recipe)">{{recipe.recipe_id}}{{recipe.recipe_name}} </p>
-  </li>
-</ul>
+<br>
+<br>
 
 <ul *ngIf = "selectedRecipe">
 <li > 
