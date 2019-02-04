@@ -15,7 +15,7 @@
 
 <h3>Drop Down</h3>
     <select [(ngModel)]="selectedRecipeModel" >
-      <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_name">{{recipe.recipe_id}}{{recipe.recipe_name}}</option>
+      <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_id">{{recipe.recipe_id}}{{recipe.recipe_name}}</option>
     </select>
     <br>
 
@@ -25,20 +25,10 @@
 <br>
 <br>
 
-<ul *ngIf = "selectedRecipe">
-<li > 
-    <input [(ngModel)] = "selectedRecipe.recipe_name">
-</li>
 
-
-<li > 
-    <p>{{selectedRecipe.recipe_name}}</p>
-</li>
-
-</ul>
-
+<input [(ngModel)]="selectedRecipeModel" placeholder="search text goes here">
 <ul >
-  <li *ngFor="let ingredient of ingredients">
+  <li *ngFor="let ingredient of ingredients  | filter : selectedRecipeModel">
     <p >{{ingredient.product}}{{ingredient.price}} </p>
   </li>
 </ul>

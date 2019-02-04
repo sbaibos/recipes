@@ -7,10 +7,13 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
+import {FilterPipe} from './pipes/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    RecipeComponent
+    RecipeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
