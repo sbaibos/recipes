@@ -30,5 +30,6 @@
 <ul *ngIf = 'selectedRecipeModel'>
   <li *ngFor="let ingredient of ingredients  | filter : selectedRecipeModel">
     <p >{{ingredient.product}}{{ingredient.price}} </p>
+	<p>{{ingredient.recipe_id}}</p>
   </li>
 </ul>
