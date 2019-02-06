@@ -8,11 +8,15 @@ export class FilterPipe implements PipeTransform {
         if(!value)return null;
         if(!args)return value;
 
-       // args = args.toLowerCase();
+        
+var result = value.filter(function(el){
+ return el.recipe_id ==args;
+});
 
-        return value.filter(function(item){
-            return JSON.stringify(item).toLowerCase().includes(args);
-            console.log();
-        });
+       
+return result;
+      
+            console.log(result);
+     
     }
 }
