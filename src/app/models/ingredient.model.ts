@@ -3,5 +3,5 @@ export class IngredientModel {
 	product:string;
 	price: number;
 	ingredient: string;
-	recipe_id: number;
+	recipe_id: any;
 }
