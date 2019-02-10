@@ -5,31 +5,65 @@
 </div>
 
 
-
-<!-- <ul *ngIf = "users">
-<li *ngFor = "let user of users"> 
-    <p (click) ="selectedUsers(user)">{{user.recipe_id}} {{user.recipe_name}}</p>
-</li>
-</ul> -->
-
-
-<h3>Drop Down</h3>
+<h3>Select a recipe</h3>
     <select [(ngModel)]="selectedRecipeModel" >
-      <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_id">{{recipe.recipe_id}}{{recipe.recipe_name}}</option>
+      <option>select</option>
+      <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_id">{{recipe.recipe_name}}</option>
     </select>
     <br>
 
-    {{selectedRecipeModel}}
+   
 
 
 <br>
 <br>
 
+<h3>input ingredient description</h3>
+<input [(ngModel)]="ingredientDescription" placeholder="it has to be in greek">
 
-<input [(ngModel)]="selectedRecipeModel" placeholder="search text goes here">
-<ul *ngIf = 'selectedRecipeModel'>
-  <li *ngFor="let ingredient of ingredients  | filter :{recipe_id:selectedRecipeModel} ">
-    <p >{{ingredient.product}}{{ingredient.price}} </p>
-	<p>{{ingredient.recipe_id}}</p>
-  </li>
-</ul>
+
+<div *ngIf = 'selectedRecipeModel'>
+
+<table>
+  <tr>
+<th>  Description</th>
+<th>Price</th>
+<th> id</th> 
+</tr>
+  
+  <tr *ngFor="let ingredient of ingredients  | filter :{recipe_id:selectedRecipeModel} ">
+
+
+
+   
+ <td>{{ingredient.product}}</td>
+    <td >{{ingredient.price}} </td>
+	<td>{{ingredient.recipe_id}}</td>
+  
+ 
+</tr>
+</table>
+</div>
+
+<div *ngIf = 'ingredientDescription'>
+
+<table>
+  <tr>
+<th>  Description</th>
+<th>Price</th>
+<th> id</th> 
+</tr>
+  
+  <tr *ngFor="let ingredient of ingredients  | filter :{ingredient:ingredientDescription} ">
+
+
+
+   
+ <td>{{ingredient.product}}</td>
+    <td >{{ingredient.price}} </td>
+	<td>{{ingredient.recipe_id}}</td>
+  
+ 
+</tr>
+</table>
+</div>
