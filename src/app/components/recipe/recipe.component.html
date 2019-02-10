@@ -28,7 +28,7 @@
 
 <input [(ngModel)]="selectedRecipeModel" placeholder="search text goes here">
 <ul *ngIf = 'selectedRecipeModel'>
-  <li *ngFor="let ingredient of ingredients  | filter : selectedRecipeModel">
+  <li *ngFor="let ingredient of ingredients  | filter :{recipe_id:selectedRecipeModel} ">
     <p >{{ingredient.product}}{{ingredient.price}} </p>
 	<p>{{ingredient.recipe_id}}</p>
   </li>
