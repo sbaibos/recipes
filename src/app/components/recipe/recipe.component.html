@@ -67,3 +67,17 @@
 </tr>
 </table>
 </div>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label formArrayName="ingredients" *ngFor="let ingredient of form.controls.ingredients.controls; let i = index">
+    <input type="checkbox" [formControlName]="i">
+  {{ingredients[i].ingredient}}
+    {{ingredients[i].price}}
+  </label>
+
+  
+  <br>
+  <button [disabled]="!form.valid">submit</button>
+</form>
+
+total price {{ingredient_sum}}
