@@ -81,3 +81,15 @@
 </form>
 
 total price {{ingredient_sum}}
+
+
+
+  
+  <div *ngFor="let ch of checkboxes" >
+     {{ch.value}}
+     <input type="checkbox" [(ngModel)]="ch.selected" value={{ch.value}} id={{ch.value}}  name="num">
+    
+</div>
+
+<button (click)="getSelected()">Print selected checkboxes</button>
+

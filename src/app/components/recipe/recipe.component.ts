@@ -74,6 +74,36 @@ selectedRecipes(recipe: RecipeModel): void {
   this.selectedRecipe = recipe;
   }
 
+checkboxes = [
+    {
+      value: 1,
+      selected: false
+    },
+    {
+      value: 5,
+      selected: false
+    },
+    {
+      value: 4,
+      selected: false
+    },
+    {
+      value: 8,
+      selected: false
+    }
+  ]
+
+  public getSelected() {
+    let result = this.checkboxes.filter((ch) => { return ch.selected })
+                     .map((ch) => { return ch.value });
+    console.log(result);
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    console.log(result.reduce(reducer));
+  
+   return this.ingredient_sum = result.reduce(reducer);
+}
 
 
 
