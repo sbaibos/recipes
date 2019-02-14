@@ -21,6 +21,8 @@ export class RecipeComponent implements OnInit {
   users: Object;
   recipes = RECIPES; //recipes  mockfile
   ingredients = INGREDIENTS;//ingredients  mockfile
+
+  selectedRecipeModel = null;
   
      form :FormGroup;
     ingredient_sum:number

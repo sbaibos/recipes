@@ -7,7 +7,7 @@
 
 <h3>Select a recipe</h3>
     <select [(ngModel)]="selectedRecipeModel" >
-      <option>select</option>
+      <option   [value]=null>select</option>
       <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_id">{{recipe.recipe_name}}</option>
     </select>
     <br>
