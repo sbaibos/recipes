@@ -27,37 +27,13 @@ export class RecipeComponent implements OnInit {
      form :FormGroup;
     ingredient_sum:number
   
-  constructor(private formBuilder: FormBuilder) {
+  constructor() {
 
-const controls = this.ingredients.map(c => new FormControl(false));
-    controls[0].setValue(true);
 
-    this.form = this.formBuilder.group({
-      ingredients: new FormArray(controls)
-    });
 
    }
 
-  submit() {
-
-    //map the values
-    const selectedOrderIds = this.form.value.ingredients
-      .map((v, i) => v ? this.ingredients[i].price : null)
-      .filter(v => v !== null);
-
-    console.log(selectedOrderIds);
-
-//add the values
-
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-    console.log(selectedOrderIds.reduce(reducer));
   
-   return this.ingredient_sum = selectedOrderIds.reduce(reducer);
-  
-   
-  
-  }
 
    
 
@@ -94,8 +70,8 @@ checkboxes = [
   ]
 
   public getSelected() {
-    let result = this.checkboxes.filter((ch) => { return ch.selected })
-                     .map((ch) => { return ch.value });
+    let result = this.ingredients.filter((ingredient) => { return ingredient.selected })
+                     .map((ingredient) => { return ingredient.price });
     console.log(result);
 
     const reducer = (accumulator, currentValue) => accumulator + currentValue;

@@ -4,4 +4,5 @@ export class IngredientModel {
 	price: number;
 	ingredient: string;
 	recipe_id: any;
+  selected:boolean;
 }

@@ -68,28 +68,20 @@
 </table>
 </div>
 
-<form [formGroup]="form" (ngSubmit)="submit()">
-  <label formArrayName="ingredients" *ngFor="let ingredient of form.controls.ingredients.controls; let i = index">
-    <input type="checkbox" [formControlName]="i">
-  {{ingredients[i].ingredient}}
-    {{ingredients[i].price}}
-  </label>
 
-  
-  <br>
-  <button [disabled]="!form.valid">submit</button>
-</form>
 
 total price {{ingredient_sum}}
 
 
 
+
+
   
-  <div *ngFor="let ch of checkboxes" >
-     {{ch.value}}
-     <input type="checkbox" [(ngModel)]="ch.selected" value={{ch.value}} id={{ch.value}}  name="num">
+  <div *ngFor="let ingredient of ingredients " >
+   <p>  {{ingredient.product}} {{ingredient.price}}</p>
+     
+     <input type="checkbox" [(ngModel)]="ingredient.selected" value={{ingredient.price}} id={{ingredient.price}}  name="num">
     
 </div>
-
+Total sum {{ingredient_sum}}
 <button (click)="getSelected()">Print selected checkboxes</button>
-
