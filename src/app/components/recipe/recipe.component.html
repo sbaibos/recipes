@@ -3,32 +3,35 @@
 {{name}}
 
 </div>
-
-
 <h3>Select a recipe</h3>
-    <select [(ngModel)]="selectedRecipeModel" >
+<hr>
+<section id="about" class="container section">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-12 "> -->
+
+<div class="col-md-2  " >
+
+    <select class="form-control"[(ngModel)]="selectedRecipeModel" >
       <option   [value]=null>select</option>
       <option *ngFor="let recipe of recipes" [ngValue]="recipe.recipe_id">{{recipe.recipe_name}}</option>
     </select>
-    <br>
+    
 
-   
-
-
-<br>
-<br>
-
-<h3>input ingredient description</h3>
-<input [(ngModel)]="ingredientDescription" placeholder="it has to be in greek">
+  </div><!-- end md-2 --> 
 
 
+
+<div class="col-md-4 overflow"  > 
+<!-- <h3>input ingredient description</h3>
+<input [(ngModel)]="ingredientDescription" placeholder="it has to be in greek"> -->
 <div *ngIf = 'selectedRecipeModel'>
 
 <table>
   <tr>
 <th>  Description</th>
 <th>Price</th>
-<th> id</th> 
+<!-- <th> id</th>  -->
 <th> select</th>
 </tr>
   
@@ -39,7 +42,7 @@
    
  <td>{{ingredient.product}}</td>
     <td >{{ingredient.price}} </td>
-	<td>{{ingredient.recipe_id}}</td>
+	<!-- <td>{{ingredient.recipe_id}}</td> -->
   <td>
      <input type="checkbox" [(ngModel)]="ingredient.selected" value={{ingredient.price}} id={{ingredient.price}}  name="num">
   </td>
@@ -49,7 +52,12 @@
 </table>
 </div>
 
-<div *ngIf = 'ingredientDescription'>
+
+</div> <!--end md4-->
+
+
+
+<!-- <div *ngIf = 'ingredientDescription'>
 
 <table>
   <tr>
@@ -73,9 +81,31 @@
  
 </tr>
 </table>
+</div> -->
+<div class="col-md-6  overflow">
+  <div *ngFor="let recipe of recipes | filter :{recipe_id:selectedRecipeModel} ">
+ <h3> {{recipe.recipe_name}} </h3> <!--name and data-->
+<p >{{recipe.recipe_description}}   </p>
 </div>
-
+  </div><!--end md6-->
   
  
-Total sum {{ingredient_sum}}
-<button (click)="getSelected()">Print selected checkboxes</button>
+
+<!-- </div>  -->
+<!--end parent-->
+</div><!--end row-->
+<br>
+ <div class="row">
+      <div class="col-md-12 parent">
+<h2>Total sum </h2>
+<hr>
+
+<button btn btn-primary (click)="getSelected()">Calculate value </button>
+<h3>
+  {{ingredient_sum}}
+</h3>
+      </div>
+      </div>
+
+</div> <!--end container-->
+</section>

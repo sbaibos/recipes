@@ -1,0 +1,25 @@
+
+		
+		.image{
+		
+		display:block;
+		margin:auto;
+		width: 200px;
+		overflow: hidden;
+				
+		}
+		
+		.parent{
+		overflow: hidden;
+   
+    height: 100%;
+		}
+	.overflow{
+		
+		 
+    height: 300px;
+       
+       top: 0;
+		overflow-y:scroll
+		}
+   hr{border-color: black;}     
