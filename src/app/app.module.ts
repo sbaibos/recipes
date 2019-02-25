@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import {FilterPipe} from './pipes/filter.pipe';
 
-import { ReactiveFormsModule } from '@angular/forms';// for the checkbox form
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';// for the checkbox form
   imports: [
     BrowserModule,
   HttpClientModule,
-  FormsModule,
-  ReactiveFormsModule
+  FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

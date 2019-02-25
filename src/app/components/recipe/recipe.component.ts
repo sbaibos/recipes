@@ -3,7 +3,7 @@ import {RecipeModel} from '../../models/recipe.model';
 import {IngredientModel} from '../../models/ingredient.model';
 import {RECIPES} from '../../mockfiles/mock-recipes';
 import {INGREDIENTS} from '../../mockfiles/mock-ingredients';
-import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
+//import { FormBuilder} from '@angular/forms';
 
 
 
@@ -24,8 +24,8 @@ export class RecipeComponent implements OnInit {
 
   selectedRecipeModel = null;
   
-     form :FormGroup;
-    ingredient_sum:number
+   
+    ingredient_sum:any
   
   constructor() {
 
@@ -74,14 +74,35 @@ checkboxes = [
                      .map((ingredient) => { return ingredient.price });
     console.log(result);
 
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    if (result === undefined || result.length == 0) {
+    // array empty or does not exist
+ return this.ingredient_sum = "please select ingredient";
+} else{
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
     console.log(result.reduce(reducer));
   
-   return this.ingredient_sum = result.reduce(reducer);
+   return this.ingredient_sum = result.reduce(reducer) / 100 + " €";
+
+}
+
+    
 }
 
 
+
+clear(event){
+
+ let result = this.ingredients.filter((ingredient) => { return ingredient.selected = false })
+
+if (result === undefined || result.length == 0) {
+    // array empty or does not exist
+ return this.ingredient_sum = "";
+}
+
+
+}
 
 
 }
